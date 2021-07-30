@@ -303,3 +303,21 @@ void SLL::removeAt(int index){
 	std::cout << "The list after removeing element at index " << index << " : ";
 	print();
 }
+
+//P21
+void SLL::insertAt(int index, int _data){
+	temp = head;
+	for(int count = 0; temp != NULL; temp = temp -> next, count++){
+		if(count == index-1){
+			nodePtr n = new node;
+			n -> data = _data;
+			n -> next = temp -> next;
+			temp -> next = n;
+			break;
+		}
+	}
+
+	std::cout << "After inserting " << _data << " at index " << index << " : ";
+	print();
+}
+

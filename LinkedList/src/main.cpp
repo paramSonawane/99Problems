@@ -73,8 +73,10 @@ int main(){
 // //P19
 // 	list.rotate(3);
 
-//P20
-	list.removeAt(4);
+// //P20
+// 	list.removeAt(4);
 
+// //P21
+// 	list.insertAt(4, 4);
 	return 0;
 }

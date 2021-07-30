@@ -18,6 +18,7 @@ public:
 	void duplicateEle(void);
 	int elementAt(int);
 	void insert(int);
+	void insertAt(int, int);
 	bool isPalindrome(void);
 	int last(void);
 	void lastButOne(void);
