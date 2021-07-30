@@ -1,6 +1,8 @@
 #include <iostream>
 #include "include/SLL.h"
 
+SLL genList(int, int);
+
 int main(){
 	SLL list;
 
@@ -78,5 +80,21 @@ int main(){
 
 // //P21
 // 	list.insertAt(4, 4);
+
+//P22
+	SLL a = genList(9, 20);
+	std::cout << "The new generated list is : ";
+	a.print();
+
 	return 0;
+}
+
+//P22
+SLL genList(int start , int end){
+	SLL a;
+
+	for(int i = start ; i <= end; i++)
+		a.insert(i);
+
+	return a;
 }
