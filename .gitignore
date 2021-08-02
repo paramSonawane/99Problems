@@ -2,3 +2,4 @@
 .vscode
 **/obj/*
 *.d
+a.out
