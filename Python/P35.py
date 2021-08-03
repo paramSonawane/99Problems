@@ -1,19 +1,23 @@
 from math import sqrt
 
-num = int(input("Enter the number : "))
+if __name__ == '__main__' :
+    num = int(input("Enter the number : "))
 
-while num%2 == 0 :
-    print(2, end=" ")
+    # First find all 2s
+    while num%2 == 0 :
+        print(2, end=" ")
 
-    num /= 2
+        num /= 2
 
-i = 3
-while i <= sqrt(num) :
-    while num % i == 0 :
-        print(i, end = " ")
+    # Start from 3 and check for further prime nubers
+    i = 3
+    while i <= sqrt(num) :
+        while num % i == 0 :
+            print(i, end = " ")
 
-        num /= i
+            num /= i
 
-    i += 2
+        i += 2
 
-if num > 2 : print(int(num))
+    # Print the factor
+    num > 2 and print(int(num))

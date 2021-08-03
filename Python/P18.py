@@ -1,13 +1,30 @@
 from SLL import *
 
 class Splice_SLL(SLL) :
+    '''
+    This class is inherited from SLL class.
+
+    It will be used for adding functionality of printing slice of the linked list.
+    '''
+
     def splice(self, start, end) :
+        '''
+        Prints splice of the linked list.
+
+        Parameters :
+            start (int) : Start index of the slice.
+            end (int)   : End index of the slice.
+        '''
+
         self.temp = self.head
 
         print("\nSplicing at indices {} & {} : ".format(start, end), end = "")
 
         count = 0
+
+        # Iterate over linked list while increamenting count of index.
         while self.temp :
+            #if the count is withing given bound, print it.
             if count >= start and count <= end :
                 print(self.temp.data, end = ", ")
 

@@ -1,14 +1,28 @@
 def gcd(a, b) :
-    if(b==0) : return  a
+    '''
+    Gives GCD of the given two number.
 
-    return gcd(b, a%b)
+    Uses recursion to find the GCD of two numbers.
 
-num = int(input("Enter the number : "))
+    Parameters :
+        a (int) : First Number.
+        b (int) : Second Number.
 
-count = 0
+    Returns :
+        Integer which is GCD of given two numbers.
+    '''
 
-for i in range(1, num+1):
-    if gcd(i, num) == 1 :
-        count += 1
+    if(b==0) : return  a #Base condition
+    else : return gcd(b, a%b)
 
-print("Euler's Totient is : ", count)
+if __name__ == '__main__' :
+    num = int(input("Enter the number : "))
+
+    count = 0
+
+    # Find the Co-Prime numbers of given number and increase the count.
+    for i in range(1, num+1):
+        if gcd(i, num) == 1 :
+            count += 1
+
+    print("Euler's Totient is : ", count)
