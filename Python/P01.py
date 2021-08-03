@@ -1,9 +1,25 @@
 from SLL import *
 
 class Last_SLL(SLL) :
+    '''
+    This class is inherited from SLL class.
+
+    It will be used to add functionality of viewing last element in the linked list.
+    '''
+
     def lastElement(self) :
+        '''
+        Helps retrive last element of the linked list.
+
+        Returns :
+            data (int) : Data of the second last node.
+        '''
+
+        # Iterate over the linked list using temp.
         self.temp = self.head
+
         while self.temp.next :
+            # Advance the temp till last element is reached.
             self.temp = self.temp.next
 
         return self.temp.data

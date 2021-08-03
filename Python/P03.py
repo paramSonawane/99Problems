@@ -1,15 +1,33 @@
 from SLL import *
 
 class eleAt_SLL(SLL) :
+    '''
+    This class is inherited from SLL class.
+
+    It will be used to add functionality of viewing Kth element in the linked list.
+    '''
     def elementAt(self, index) :
+        '''
+        Retriving element at given index as a parameter.
+
+        Attributes :
+            index (int) : Index at which the linked list data is to be retrived.
+
+        Returns :
+            data (int) : Data of the node at given index.
+        '''
+
         self.temp = self.head
 
+        # To keep track of index in the loop.
         count = 0
 
+        # Iterate while the node with given index is found.
         while count != index :
             self.temp = self.temp.next
             count += 1
 
+        # Return the data at that node.
         return self.temp.data
 
 if __name__ == "__main__" :

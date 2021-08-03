@@ -1,12 +1,26 @@
 from SLL import *
 
 class dropNth_SLL(SLL) :
+    '''
+    This class is inherited from SLL class.
+
+    It will be used for adding functionality of removing every n'th element in linked list.
+    '''
+
     def dropNth(self, num) :
+        '''
+        Removes every num th element from the linked list.
+
+        Parameters :
+            num (int) : interval at which the element should be removed.
+        '''
+
         prev = None
 
         self.temp = self.head
         count = 1
 
+        # Iterate over the linked list and drop element if the index is multiple of given num.
         while self.temp :
             if count%num == 0 :
                 prev.next = self.temp.next

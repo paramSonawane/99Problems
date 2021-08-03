@@ -1,11 +1,25 @@
 from SLL import *
 
 class length_SLL(SLL) :
+    '''
+    This class is inherited from SLL class.
+
+    It will be used to add functionality of finding length of the linked list.
+    '''
+
     def getLength(self) :
+        '''
+        Find the length of/ number of nodes in the linked list.
+
+        Returns :
+            count (int) : length of the linked list.
+        '''
+
         self.temp = self.head
 
         count = 0
 
+        # Iterate over the linked list. Keep incrementing count each iteration.
         while self.temp :
             self.temp = self.temp.next
             count += 1
