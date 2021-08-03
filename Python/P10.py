@@ -11,6 +11,8 @@ class RLE_SLL(SLL) :
         '''
         Used to print the Run-Length Encoded version of Linked List.
 
+        Run-Length Encoding print the repeated consicutive elements as single element along with its frequency.
+
         Example :
             If the linked list is (1, 1, 2, 2, 2, 3, 3, 3, 3, 4, 5, 5, 5)
             It will print (1X2, 2X3, 3X4, 4X1, 5X3)
